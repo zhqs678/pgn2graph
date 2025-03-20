@@ -352,10 +352,10 @@ function moves2graph(double_steps) {
   for (var i = 0; i < len; i++) {
     var line = i + " [label=\"" + double_steps[i].white.step + ". " 
       + double_steps[i].white.move + " " 
-      + double_steps[i].black.move + "\n" 
+      + double_steps[i].black.move;
 
       if (double_steps[i].white.comment != "")
-        line += double_steps[i].white.comment + ".";
+        line += "\\n" + double_steps[i].white.comment + ".";
       if (double_steps[i].black.comment != "")
         line += double_steps[i].black.comment + ".";
       // + double_steps[i].white.id // 防止有重复步数
